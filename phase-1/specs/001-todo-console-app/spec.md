@@ -2,7 +2,7 @@
 
 **Feature Branch**: `001-todo-console-app`
 **Created**: 2025-12-28
-**Status**: Draft
+**Status**: Implemented
 **Input**: User description: "In-Memory Python Console Todo Application - Target audience: Developers building a minimal viable product for task management via command-line interface, suitable for hackathon projects or learning spec-driven development. Focus: Implement core todo functionalities including adding tasks with title and description, viewing task list with status indicators, updating task details, deleting tasks by ID, and marking tasks as complete/incomplete, all stored in memory."
 
 ## User Scenarios & Testing *(mandatory)*

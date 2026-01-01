@@ -4,6 +4,9 @@ version = "1.0.0"
 description = "In-Memory Python Console Todo Application - Phase I"
 readme = "README.md"
 requires-python = ">=3.13"
+dependencies = [
+    "rich>=13.0.0"
+]
 authors = [
     {name = "Hackathon II Participant"}
 ]

@@ -1,19 +1,20 @@
 # In-Memory Python Console Todo Application
 
-A command-line todo application demonstrating spec-driven development with clean code principles. This project showcases a minimal viable product for task management via console interface, suitable for hackathon projects and learning spec-driven development methodologies.
+A command-line todo application demonstrating spec-driven development with clean code principles and beautiful Rich library formatting. This project showcases a minimal viable product for task management via console interface, suitable for hackathon projects and learning spec-driven development methodologies.
 
 ## Features
 
 - **Add Tasks**: Create tasks with title and description
-- **View Tasks**: List all tasks with status indicators ([ ] incomplete, [x] complete)
+- **View Tasks**: List all tasks with status indicators in beautiful Rich table format
 - **Update Tasks**: Modify task details by ID
 - **Delete Tasks**: Remove tasks by ID
 - **Mark Complete/Incomplete**: Toggle task completion status
+- **Rich UI**: Beautiful colored panels, tables, and styled messages powered by Rich library
 
 ## Requirements
 
 - **Python 3.13+**
-- No external dependencies (uses Python standard library only)
+- **Rich library 13.0+** (for enhanced UI with colors, panels, and tables)
 
 ## Setup Instructions
 
@@ -28,6 +29,15 @@ A command-line todo application demonstrating spec-driven development with clean
 3. **Navigate to the project directory**:
    ```bash
    cd phase-1
+   ```
+
+4. **Install Rich library** (for enhanced UI):
+   ```bash
+   pip install rich>=13.0.0
+   # Or using UV (recommended):
+   uv pip install "rich>=13.0.0"
+   # Or if using UV with dependency already in pyproject.toml:
+   uv sync
    ```
 
 ## Running the Application
@@ -86,11 +96,12 @@ TODO APPLICATION - MAIN MENU
 
 **2. Viewing Tasks**:
 - Select option `2`
-- All tasks are displayed with:
-  - Status indicator: `[ ]` for incomplete, `[x]` for complete
-  - Task ID
-  - Title
-  - Description
+- All tasks are displayed in a beautiful Rich table with:
+  - Status column with checkmarks (✓) for complete, circles (○) for incomplete
+  - Task ID (centered, cyan color)
+  - Title (white)
+  - Description (dimmed/gray)
+- Empty list displays in yellow: "No tasks found"
 
 **3. Updating a Task**:
 - Select option `3`

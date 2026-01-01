@@ -29,14 +29,14 @@ description: "Task list for In-Memory Python Console Todo Application"
 
 **Purpose**: Project initialization and basic structure
 
-- [ ] T001 Verify Python 3.13+ installed and accessible via command line
-- [ ] T002 Initialize UV project with pyproject.toml in repository root
-- [ ] T003 Create src/ directory structure: src/models/, src/services/, src/cli/
-- [ ] T004 [P] Create __init__.py in src/ to make it a package
-- [ ] T005 [P] Create __init__.py in src/models/ to make it a package
-- [ ] T006 [P] Create __init__.py in src/services/ to make it a package
-- [ ] T007 [P] Create __init__.py in src/cli/ to make it a package
-- [ ] T008 Create placeholder README.md with project title and description
+- [X] T001 Verify Python 3.13+ installed and accessible via command line
+- [X] T002 Initialize UV project with pyproject.toml in repository root
+- [X] T003 Create src/ directory structure: src/models/, src/services/, src/cli/
+- [X] T004 [P] Create __init__.py in src/ to make it a package
+- [X] T005 [P] Create __init__.py in src/models/ to make it a package
+- [X] T006 [P] Create __init__.py in src/services/ to make it a package
+- [X] T007 [P] Create __init__.py in src/cli/ to make it a package
+- [X] T008 Create placeholder README.md with project title and description
 
 ---
 
@@ -46,18 +46,18 @@ description: "Task list for In-Memory Python Console Todo Application"
 
 **⚠️ CRITICAL**: No user story work can begin until this phase is complete
 
-- [ ] T009 Define Task dataclass in src/models/task.py with fields: id (int), title (str), description (str), completed (bool, default False)
-- [ ] T010 Add format_status() method to Task class in src/models/task.py returning "[ ]" for incomplete or "[x]" for complete
-- [ ] T011 Add __str__() method to Task class in src/models/task.py for formatted display output
-- [ ] T012 Add Google-style docstring to Task class in src/models/task.py documenting class purpose and attributes
-- [ ] T013 Create TaskService class in src/services/task_service.py with __init__ method initializing empty task list and next_id counter
-- [ ] T014 Implement create_task(title: str, description: str) -> Task method in src/services/task_service.py with validation for empty fields and length limits (200 title, 1000 desc)
-- [ ] T015 Implement get_all_tasks() -> List[Task] method in src/services/task_service.py returning copy of task list
-- [ ] T016 Implement get_task_by_id(task_id: int) -> Optional[Task] method in src/services/task_service.py with linear search
-- [ ] T017 Implement update_task(task_id: int, title: str, description: str) -> bool method in src/services/task_service.py returning True if task found and updated, False otherwise
-- [ ] T018 Implement delete_task(task_id: int) -> bool method in src/services/task_service.py returning True if task found and removed, False otherwise
-- [ ] T019 Implement toggle_complete(task_id: int) -> bool method in src/services/task_service.py flipping completed status and returning True if task found, False otherwise
-- [ ] T020 Add comprehensive Google-style docstrings to all methods in src/services/task_service.py documenting parameters, return values, and raised exceptions
+- [X] T009 Define Task dataclass in src/models/task.py with fields: id (int), title (str), description (str), completed (bool, default False)
+- [X] T010 Add format_status() method to Task class in src/models/task.py returning "[ ]" for incomplete or "[x]" for complete
+- [X] T011 Add __str__() method to Task class in src/models/task.py for formatted display output
+- [X] T012 Add Google-style docstring to Task class in src/models/task.py documenting class purpose and attributes
+- [X] T013 Create TaskService class in src/services/task_service.py with __init__ method initializing empty task list and next_id counter
+- [X] T014 Implement create_task(title: str, description: str) -> Task method in src/services/task_service.py with validation for empty fields and length limits (200 title, 1000 desc)
+- [X] T015 Implement get_all_tasks() -> List[Task] method in src/services/task_service.py returning copy of task list
+- [X] T016 Implement get_task_by_id(task_id: int) -> Optional[Task] method in src/services/task_service.py with linear search
+- [X] T017 Implement update_task(task_id: int, title: str, description: str) -> bool method in src/services/task_service.py returning True if task found and updated, False otherwise
+- [X] T018 Implement delete_task(task_id: int) -> bool method in src/services/task_service.py returning True if task found and removed, False otherwise
+- [X] T019 Implement toggle_complete(task_id: int) -> bool method in src/services/task_service.py flipping completed status and returning True if task found, False otherwise
+- [X] T020 Add comprehensive Google-style docstrings to all methods in src/services/task_service.py documenting parameters, return values, and raised exceptions
 
 **Checkpoint**: Foundation ready - user story implementation can now begin in parallel
 
@@ -71,14 +71,14 @@ description: "Task list for In-Memory Python Console Todo Application"
 
 ### Implementation for User Story 1
 
-- [ ] T021 [P] [US1] Create display_menu() function in src/cli/cli.py showing 6 numbered menu options: Add Task, View Tasks, Update Task, Delete Task, Mark Complete/Incomplete, Exit
-- [ ] T022 [P] [US1] Create validate_non_empty(user_input: str, field_name: str) -> str helper function in src/cli/cli.py raising ValueError if input is empty
-- [ ] T023 [US1] Implement handle_add_task(task_service: TaskService) function in src/cli/cli.py prompting for title and description, validating non-empty, calling task_service.create_task(), and displaying confirmation message
-- [ ] T024 [US1] Implement handle_view_tasks(task_service: TaskService) function in src/cli/cli.py calling get_all_tasks(), displaying "No tasks found" if empty, otherwise iterating and printing each task with format_status() indicator
-- [ ] T025 [US1] Create run_cli(task_service: TaskService) function in src/cli/cli.py with infinite loop displaying menu, capturing user choice, routing to appropriate handler, and handling "Exit" option
-- [ ] T026 [US1] Add Google-style docstrings to all functions in src/cli/cli.py documenting purpose, parameters, and behavior
-- [ ] T027 [US1] Create src/main.py entry point importing TaskService and run_cli, initializing TaskService instance, calling run_cli(task_service)
-- [ ] T028 [US1] Wrap run_cli() call in src/main.py with try-except block catching all exceptions, logging to stderr, and exiting gracefully
+- [X] T021 [P] [US1] Create display_menu() function in src/cli/cli.py showing 6 numbered menu options: Add Task, View Tasks, Update Task, Delete Task, Mark Complete/Incomplete, Exit
+- [X] T022 [P] [US1] Create validate_non_empty(user_input: str, field_name: str) -> str helper function in src/cli/cli.py raising ValueError if input is empty
+- [X] T023 [US1] Implement handle_add_task(task_service: TaskService) function in src/cli/cli.py prompting for title and description, validating non-empty, calling task_service.create_task(), and displaying confirmation message
+- [X] T024 [US1] Implement handle_view_tasks(task_service: TaskService) function in src/cli/cli.py calling get_all_tasks(), displaying "No tasks found" if empty, otherwise iterating and printing each task with format_status() indicator
+- [X] T025 [US1] Create run_cli(task_service: TaskService) function in src/cli/cli.py with infinite loop displaying menu, capturing user choice, routing to appropriate handler, and handling "Exit" option
+- [X] T026 [US1] Add Google-style docstrings to all functions in src/cli/cli.py documenting purpose, parameters, and behavior
+- [X] T027 [US1] Create src/main.py entry point importing TaskService and run_cli, initializing TaskService instance, calling run_cli(task_service)
+- [X] T028 [US1] Wrap run_cli() call in src/main.py with try-except block catching all exceptions, logging to stderr, and exiting gracefully
 
 **Checkpoint**: At this point, User Story 1 should be fully functional and testable independently - can add tasks and view task list with status indicators
 
@@ -92,10 +92,10 @@ description: "Task list for In-Memory Python Console Todo Application"
 
 ### Implementation for User Story 2
 
-- [ ] T029 [P] [US2] Create validate_task_id(user_input: str) -> Optional[int] helper function in src/cli/cli.py attempting int conversion and returning None if ValueError occurs
-- [ ] T030 [US2] Implement handle_mark_complete(task_service: TaskService) function in src/cli/cli.py prompting for task ID, validating numeric format, calling task_service.toggle_complete(id), displaying success with new status or "Task with ID {id} not found" error
-- [ ] T031 [US2] Wire handle_mark_complete to menu option "5. Mark Complete/Incomplete" in run_cli() function in src/cli/cli.py
-- [ ] T032 [US2] Add docstring to handle_mark_complete() in src/cli/cli.py documenting toggle behavior
+- [X] T029 [P] [US2] Create validate_task_id(user_input: str) -> Optional[int] helper function in src/cli/cli.py attempting int conversion and returning None if ValueError occurs
+- [X] T030 [US2] Implement handle_mark_complete(task_service: TaskService) function in src/cli/cli.py prompting for task ID, validating numeric format, calling task_service.toggle_complete(id), displaying success with new status or "Task with ID {id} not found" error
+- [X] T031 [US2] Wire handle_mark_complete to menu option "5. Mark Complete/Incomplete" in run_cli() function in src/cli/cli.py
+- [X] T032 [US2] Add docstring to handle_mark_complete() in src/cli/cli.py documenting toggle behavior
 
 **Checkpoint**: At this point, User Stories 1 AND 2 should both work independently - can create, view, and toggle completion status
 
@@ -109,9 +109,9 @@ description: "Task list for In-Memory Python Console Todo Application"
 
 ### Implementation for User Story 3
 
-- [ ] T033 [US3] Implement handle_update_task(task_service: TaskService) function in src/cli/cli.py prompting for task ID, validating numeric format, verifying task exists via get_task_by_id(), prompting for new title and description, calling task_service.update_task(id, title, desc), displaying success or "Task with ID {id} not found" error
-- [ ] T034 [US3] Wire handle_update_task to menu option "3. Update Task" in run_cli() function in src/cli/cli.py
-- [ ] T035 [US3] Add docstring to handle_update_task() in src/cli/cli.py documenting update behavior and validation
+- [X] T033 [US3] Implement handle_update_task(task_service: TaskService) function in src/cli/cli.py prompting for task ID, validating numeric format, verifying task exists via get_task_by_id(), prompting for new title and description, calling task_service.update_task(id, title, desc), displaying success or "Task with ID {id} not found" error
+- [X] T034 [US3] Wire handle_update_task to menu option "3. Update Task" in run_cli() function in src/cli/cli.py
+- [X] T035 [US3] Add docstring to handle_update_task() in src/cli/cli.py documenting update behavior and validation
 
 **Checkpoint**: At this point, User Stories 1, 2, AND 3 should all work independently - can create, view, toggle status, and update task details
 
@@ -125,9 +125,9 @@ description: "Task list for In-Memory Python Console Todo Application"
 
 ### Implementation for User Story 4
 
-- [ ] T036 [US4] Implement handle_delete_task(task_service: TaskService) function in src/cli/cli.py prompting for task ID, validating numeric format, calling task_service.delete_task(id), displaying "Task {id} deleted successfully" or "Task with ID {id} not found" error
-- [ ] T037 [US4] Wire handle_delete_task to menu option "4. Delete Task" in run_cli() function in src/cli/cli.py
-- [ ] T038 [US4] Add docstring to handle_delete_task() in src/cli/cli.py documenting deletion behavior
+- [X] T036 [US4] Implement handle_delete_task(task_service: TaskService) function in src/cli/cli.py prompting for task ID, validating numeric format, calling task_service.delete_task(id), displaying "Task {id} deleted successfully" or "Task with ID {id} not found" error
+- [X] T037 [US4] Wire handle_delete_task to menu option "4. Delete Task" in run_cli() function in src/cli/cli.py
+- [X] T038 [US4] Add docstring to handle_delete_task() in src/cli/cli.py documenting deletion behavior
 
 **Checkpoint**: All user stories should now be independently functional - full CRUD operations available
 
@@ -137,26 +137,26 @@ description: "Task list for In-Memory Python Console Todo Application"
 
 **Purpose**: Improvements that affect multiple user stories, final validation, and documentation
 
-- [ ] T039 [P] Review all code in src/ for PEP 8 compliance using manual inspection or `python -m black --check src/`
-- [ ] T040 [P] Verify all functions have Google-style docstrings with parameter and return value documentation
-- [ ] T041 [P] Check that no functions exceed 50 lines (constitution requirement)
-- [ ] T042 [P] Verify error messages match spec examples exactly: "Title cannot be empty", "Task with ID {id} not found", "Invalid ID format. Please enter a number.", "Invalid option. Please select a valid menu item."
-- [ ] T043 Update README.md with "Setup Instructions" section documenting Python 3.13+ requirement and running command: `uv run python src/main.py`
-- [ ] T044 Update README.md with "Usage Guide" section showing menu navigation and example commands for each operation
-- [ ] T045 Update README.md with "Demonstration Scenarios" section from constitution: add 3 tasks, list with status, update one, mark one complete, delete one, list remaining
-- [ ] T046 Execute manual test: Add task with empty title → verify "Title cannot be empty" error and re-prompt
-- [ ] T047 Execute manual test: Add task with 250-character title → verify graceful handling (accept or error)
-- [ ] T048 Execute manual test: Enter "abc" for task ID when marking complete → verify "Invalid ID format" error
-- [ ] T049 Execute manual test: Select invalid menu option "9" → verify "Invalid option" error and menu re-display
-- [ ] T050 Execute manual test: Exit application → verify clean termination without errors
-- [ ] T051 Execute manual test: Full lifecycle - add task, view, update, mark complete, delete → verify no crashes (SC-001)
-- [ ] T052 Execute manual test: Locate any feature in menu → verify under 10 seconds (SC-002)
-- [ ] T053 Execute manual test: Trigger error (invalid ID) → verify error message displays under 1 second and retry enabled (SC-003)
-- [ ] T054 Execute manual test: Add 3 tasks, mark one complete, view list → verify [ ] and [x] indicators consistent (SC-004)
-- [ ] T055 Execute manual test: Create 100 tasks, perform add/view/update/delete/mark operations → verify each under 500ms (SC-005)
-- [ ] T056 Code review validation: Verify modular structure (models/services/cli separation), PEP 8 compliance, and docstrings present (SC-006)
-- [ ] T057 Update spec.md status from "Draft" to "Implemented"
-- [ ] T058 Git commit all code with message: `feat: implement todo console app (AI-assisted)`
+- [X] T039 [P] Review all code in src/ for PEP 8 compliance using manual inspection or `python -m black --check src/`
+- [X] T040 [P] Verify all functions have Google-style docstrings with parameter and return value documentation
+- [X] T041 [P] Check that no functions exceed 50 lines (constitution requirement)
+- [X] T042 [P] Verify error messages match spec examples exactly: "Title cannot be empty", "Task with ID {id} not found", "Invalid ID format. Please enter a number.", "Invalid option. Please select a valid menu item."
+- [X] T043 Update README.md with "Setup Instructions" section documenting Python 3.13+ requirement and running command: `uv run python src/main.py`
+- [X] T044 Update README.md with "Usage Guide" section showing menu navigation and example commands for each operation
+- [X] T045 Update README.md with "Demonstration Scenarios" section from constitution: add 3 tasks, list with status, update one, mark one complete, delete one, list remaining
+- [X] T046 Execute manual test: Add task with empty title → verify "Title cannot be empty" error and re-prompt
+- [X] T047 Execute manual test: Add task with 250-character title → verify graceful handling (accept or error)
+- [X] T048 Execute manual test: Enter "abc" for task ID when marking complete → verify "Invalid ID format" error
+- [X] T049 Execute manual test: Select invalid menu option "9" → verify "Invalid option" error and menu re-display
+- [X] T050 Execute manual test: Exit application → verify clean termination without errors
+- [X] T051 Execute manual test: Full lifecycle - add task, view, update, mark complete, delete → verify no crashes (SC-001)
+- [X] T052 Execute manual test: Locate any feature in menu → verify under 10 seconds (SC-002)
+- [X] T053 Execute manual test: Trigger error (invalid ID) → verify error message displays under 1 second and retry enabled (SC-003)
+- [X] T054 Execute manual test: Add 3 tasks, mark one complete, view list → verify [ ] and [x] indicators consistent (SC-004)
+- [X] T055 Execute manual test: Create 100 tasks, perform add/view/update/delete/mark operations → verify each under 500ms (SC-005)
+- [X] T056 Code review validation: Verify modular structure (models/services/cli separation), PEP 8 compliance, and docstrings present (SC-006)
+- [X] T057 Update spec.md status from "Draft" to "Implemented"
+- [X] T058 Git commit all code with message: `feat: implement todo console app (AI-assisted)`
 
 ---
 
